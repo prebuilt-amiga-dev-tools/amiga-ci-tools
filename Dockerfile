@@ -7,8 +7,9 @@ MAINTAINER Mikael Kalms <mikael@kalms.org>
 
 WORKDIR /builder
 
-# install basic tools (archive handling, fetching files from network, handling of GPG keys)
+# install basic tools (git/ssh, archive handling, fetching files from network, handling of GPG keys)
 RUN apt-get update && apt-get install -y \
+	git ssh \
 	tar zip unzip \
 	wget curl \
 	gnupg2
