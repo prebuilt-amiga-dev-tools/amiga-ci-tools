@@ -35,4 +35,4 @@ RUN rm -rf vlink*
 # install testrunner-68k
 RUN echo "deb https://testrunner-68k-apt.s3-eu-west-1.amazonaws.com stable main" | tee /etc/apt/sources.list.d/testrunner-68k.list
 RUN wget https://testrunner-68k-apt.s3-eu-west-1.amazonaws.com/Release.key -O - | apt-key add -
-RUN apt-get update && apt-get install -y testrunner-68k
+RUN apt-get update && apt-get install -y testrunner-68k=0.1.8
