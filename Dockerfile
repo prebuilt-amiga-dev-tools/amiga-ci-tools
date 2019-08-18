@@ -9,7 +9,8 @@ WORKDIR /builder
 # install basic tools (git/ssh, archive handling, fetching files from network, handling of GPG keys)
 RUN apt-get update && apt-get install -y \
 	git ssh \
-	tar zip unzip \
+	tar gzip zip unzip \
+	ca-certificates \
 	wget curl \
 	gnupg2
 
